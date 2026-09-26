@@ -7,6 +7,8 @@ draft: false
 ---
 
 
+![image.png](blob:https:/app.pagescms.org/6e6b13f4-d179-492e-9c4f-c6403ba20fa7)
+
 上下左右:为右边的箭头方向  
 
 A键:为(Z)吸引、爆炸  
