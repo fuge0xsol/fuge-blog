@@ -1,9 +1,12 @@
 ---
 title: 1080P 重制版《太空战斗机·G-Darius HD》
 published: 2026-09-26
-category: 游戏
 description: 1080P 重制版《太空战斗机·G-Darius HD》
-tags: [game, arcade, 街机]
+category: 游戏
+tags:
+  - game
+  - arcade
+  - 街机
 draft: false
 ---
 
@@ -35,4 +38,5 @@ RT右扳机键:为大键盘2键
 
 如果嫌游戏不够流畅的话设置如下：  
 
-任意游戏界面进入→按TAB到游戏菜单→Option→Game Settings→按Z→Reduced slow-down mode设置为ON可以大幅提升流畅度  
+任意游戏界面进入→按TAB到游戏菜单→Option→Game Settings→按Z→Reduced slow-down mode设置为ON可以大幅提升流畅度
+下载地址：[https://mega.nz/file/EZV1kQBK#2U4ex073vIdOEuSvWUwWp8UUfTIx2DeZdWmeXW2PsLc](https://mega.nz/file/EZV1kQBK#2U4ex073vIdOEuSvWUwWp8UUfTIx2DeZdWmeXW2PsLc)
