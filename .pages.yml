@@ -11,23 +11,25 @@ content:
     path: src/content/posts
     filename: "{primary}.md"
     view:
-      fields: [title, pubDatetime, draft]
+      fields: [title, published, draft]
       primary: title
-      sort: pubDatetime
+      sort: published
       order: desc
     fields:
       - name: title
         label: 标题
         type: string
         required: true
-      - name: pubDatetime
+      - name: published
         label: 发布时间
         type: date
         required: true
       - name: description
         label: 摘要
         type: text
-        required: true
+      - name: category
+        label: 分类
+        type: string
       - name: tags
         label: 标签
         type: list
@@ -46,14 +48,8 @@ content:
   - name: about
     label: 关于页
     type: file
-    path: src/content/pages/about.md
+    path: src/content/spec/about.md
     fields:
-      - name: title
-        label: 标题
-        type: string
-      - name: description
-        label: 摘要
-        type: text
       - name: body
         label: 正文
         type: rich-text

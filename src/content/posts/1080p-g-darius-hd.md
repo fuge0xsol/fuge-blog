@@ -1,6 +1,7 @@
 ---
 title: 1080P 重制版《太空战斗机·G-Darius HD》
-pubDatetime: 2026-09-26
+published: 2026-09-26
+category: 游戏
 description: 1080P 重制版《太空战斗机·G-Darius HD》
 tags: [game, arcade, 街机]
 draft: false

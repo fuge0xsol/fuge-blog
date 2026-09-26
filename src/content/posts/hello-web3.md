@@ -1,6 +1,7 @@
 ---
 title: Hello Web3：这个博客的第一篇文章
-pubDatetime: 2026-09-17T22:00:00+08:00
+published: 2026-09-17T22:00:00+08:00
+category: 随想
 description: 为什么在 2026 年开始写一个 Web3 博客，以及这里会写些什么。
 tags: [web3, 随想]
 ---

@@ -1,6 +1,7 @@
 ---
 title: 第一次秒成功开龟壳（甲骨文云），以及2g12g升级4g24g的操作思考
-pubDatetime: 2026-09-26T00:00:00+08:00
+published: 2026-09-26T00:00:00+08:00
+category: 免费资源
 description: 第一次秒成功开龟壳（甲骨文云），以及2g12g升级4g24g的操作思考
 tags: [vps, free]
 ---
