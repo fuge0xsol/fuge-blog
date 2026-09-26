@@ -1,0 +1,55 @@
+media:
+  input: public/media
+  output: /media
+  rename: safe
+  categories: [image, video, document]
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: src/content/posts
+    filename: "{primary}.md"
+    view:
+      fields: [title, published, draft]
+      primary: title
+      sort: published
+      order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: published
+        label: 发布日期
+        type: date
+        required: true
+      - name: description
+        label: 摘要
+        type: text
+      - name: tags
+        label: 标签
+        type: list
+        field:
+          name: tag
+          label: 标签
+          type: string
+      - name: category
+        label: 分类
+        type: string
+      - name: draft
+        label: 草稿
+        type: boolean
+        default: false
+      - name: body
+        label: 正文
+        type: rich-text
+
+  - name: about
+    label: 关于页
+    type: file
+    path: src/content/spec/about.md
+    fields:
+      - name: body
+        label: 正文
+        type: rich-text

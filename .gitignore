@@ -1,4 +1,5 @@
-public/
-resources/
-.hugo_build.lock
-*.tgz
+node_modules/
+dist/
+.astro/
+.wrangler/
+.DS_Store
