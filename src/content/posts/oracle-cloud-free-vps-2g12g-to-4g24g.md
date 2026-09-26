@@ -1,10 +1,8 @@
 ---
 title: 第一次秒成功开龟壳（甲骨文云），以及2g12g升级4g24g的操作思考
-published: 2026-09-26
+pubDatetime: 2026-09-26T00:00:00+08:00
 description: 第一次秒成功开龟壳（甲骨文云），以及2g12g升级4g24g的操作思考
-tags: vps,free
-category: 免费资源
-draft: false
+tags: [vps, free]
 ---
 开龟壳（甲骨文云）方法，直接安卓手机+wifi+电信号操作+gmail注册账号  
 （邮箱验证的时候需要科学上网，进入gmail app后关掉科学上网，再点验证）  
