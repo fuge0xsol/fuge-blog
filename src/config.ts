@@ -65,11 +65,6 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:x-twitter",
 			url: "https://x.com/fuge0xsol",
 		},
-		{
-			name: "Paragraph",
-			icon: "fa6-solid:pen-nib",
-			url: "https://paragraph.com/@fuge0xsol",
-		},
 	],
 };
 
