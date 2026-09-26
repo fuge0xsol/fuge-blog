@@ -15,7 +15,13 @@ const posts = defineCollection({
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
-      tags: z.array(z.string()).default(["others"]),
+      tags: z
+        .preprocess(
+          v => (typeof v === "string" ? v.split(",").map(s => s.trim()).filter(Boolean) : v),
+          z.array(z.string())
+        )
+        .optional()
+        .default(["others"]),
       ogImage: image().or(z.string()).optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
