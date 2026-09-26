@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: fuge0xsol/fuge-blog
+  branch: main
+
+# 登录方式:GitHub 个人访问令牌(PAT),无需 OAuth 服务
+# 令牌只需 fuge-blog 仓库的 Contents 读写权限
+
+site_url: https://fuge-blog.pages.dev
+logo_url: /favicon.svg
+locale: zh_CN
+
+media_folder: public/media
+public_folder: /media
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: src/content/posts
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    preview: false
+    sortable_fields:
+      - published
+      - title
+      - draft
+    view_filters: []
+    fields:
+      - name: title
+        label: 标题
+        widget: string
+        required: true
+      - name: published
+        label: 发布时间
+        widget: datetime
+        required: true
+      - name: description
+        label: 摘要
+        widget: text
+        required: false
+      - name: category
+        label: 分类
+        widget: string
+        required: false
+      - name: tags
+        label: 标签
+        widget: list
+        required: false
+      - name: draft
+        label: 草稿
+        widget: boolean
+        default: false
+      - name: body
+        label: 正文
+        widget: markdown
+
+  - name: about
+    label: 关于页
+    files:
+      - name: about
+        label: 关于
+        file: src/content/spec/about.md
+        fields:
+          - name: title
+            label: 标题
+            widget: string
+            required: false
+          - name: body
+            label: 正文
+            widget: markdown
