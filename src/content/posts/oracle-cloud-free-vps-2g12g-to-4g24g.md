@@ -9,14 +9,14 @@ tags: [vps, free]
 信用卡用的是广发臻尚白金卡，Mastercard  
 秒开成功，免费账户开2g+12g都开不出来，于是选择升级账户成Pay As You Go  
 秒开2g+12g，可是不甘心只能2g+12g，找到官网  
-**[https://www.oracle.com/cloud/price-list/#pricing-container**](https://www.oracle.com/cloud/price-list/#pricing-container)  
+[Oracle Cloud 官网价格页](https://www.oracle.com/cloud/price-list/#pricing-container)  
 有这样一段话
 
 *Each paid tenancy gets the first 3,000 OCPU hours and 18,000 GB hours per month for free to create Ampere A1 Compute instances. This free-tier usage is shared across Bare Metal, Virtual Machine, and Container Instances.*  
 
 ![image.png](/media/image.png)
 
-问了下gork
+问了下 Grok
 
 ![image.png](/media/image-1.png)
 
