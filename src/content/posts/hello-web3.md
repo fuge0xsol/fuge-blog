@@ -1,10 +1,8 @@
 ---
 title: Hello Web3：这个博客的第一篇文章
-published: 2026-09-17
+pubDatetime: 2026-09-17T22:00:00+08:00
 description: 为什么在 2026 年开始写一个 Web3 博客，以及这里会写些什么。
 tags: [web3, 随想]
-category: 随想
-draft: false
 ---
 
 这是 fuge's blog 的第一篇文章。
@@ -35,4 +33,3 @@ Web3 最迷人的地方在于：**你的资产、你的身份、你的数据，�
 老规矩声明：本站所有内容都是个人记录和分享，**不构成任何投资建议**（Not financial advice）。链上操作风险极高，请自行研究（DYOR）。
 
 下一篇见。
-

@@ -23,14 +23,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
+
+      - name: Setup pnpm
+        run: npm i -g pnpm@10 --no-audit --no-fund
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -39,6 +38,7 @@ jobs:
         run: pnpm build
         env:
           BASE_PATH: /fuge-blog
+          SITE_URL: https://fuge0xsol.github.io/fuge-blog/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
