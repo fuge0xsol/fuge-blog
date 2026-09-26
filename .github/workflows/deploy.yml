@@ -35,7 +35,14 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build for GitHub Pages (subpath)
-        run: pnpm build
+        run: |
+          ok=0
+          for i in 1 2 3; do
+            if pnpm build; then ok=1; break; fi
+            echo "attempt $i failed, retrying..."
+            sleep 5
+          done
+          [ "$ok" = "1" ]
         env:
           BASE_PATH: /fuge-blog
           SITE_URL: https://fuge0xsol.github.io/fuge-blog/
@@ -51,8 +58,13 @@ jobs:
 
       - name: Build for Cloudflare (root)
         run: |
-          pnpm exec astro build
-          pnpm exec pagefind --site dist
+          ok=0
+          for i in 1 2 3; do
+            if pnpm exec astro build && pnpm exec pagefind --site dist; then ok=1; break; fi
+            echo "attempt $i failed, retrying..."
+            sleep 5
+          done
+          [ "$ok" = "1" ]
 
       - name: Deploy to Cloudflare Pages
         if: env.CF_TOKEN_SET == 'true'
