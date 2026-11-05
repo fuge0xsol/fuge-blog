@@ -1,0 +1,68 @@
+---
+// Giscus 评论组件:数据存本仓库 Discussions,评论者需登录 GitHub
+// 跟随 Fuwari 明暗主题;兼容 swup 页面切换(换页后自动重挂)
+---
+
+<section id="giscus-container" class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full mb-4 onload-animation">
+    <h2 class="flex items-center text-xl text-[var(--primary)] font-bold mb-3">
+        <div class="transition w-1 h-5 rounded-md bg-[var(--primary)] mr-2"></div>
+        留言
+    </h2>
+    <div id="giscus-mount"></div>
+</section>
+
+<script>
+    const REPO = "fuge0xsol/fuge-blog";
+    const REPO_ID = "R_kgDOUe_7Zg";
+    const CATEGORY = "Announcements";
+    const CATEGORY_ID = "DIC_kwDOUe_7Zs4DKbMI";
+
+    const giscusTheme = () =>
+        document.documentElement.classList.contains("dark")
+            ? "transparent_dark"
+            : "light";
+
+    function mountGiscus() {
+        const mount = document.getElementById("giscus-mount");
+        if (!mount || mount.dataset.loaded === "true") return;
+        mount.dataset.loaded = "true";
+        const s = document.createElement("script");
+        s.src = "https://giscus.app/client.js";
+        s.setAttribute("data-repo", REPO);
+        s.setAttribute("data-repo-id", REPO_ID);
+        s.setAttribute("data-category", CATEGORY);
+        s.setAttribute("data-category-id", CATEGORY_ID);
+        s.setAttribute("data-mapping", "pathname");
+        s.setAttribute("data-strict", "0");
+        s.setAttribute("data-reactions-enabled", "1");
+        s.setAttribute("data-emit-metadata", "0");
+        s.setAttribute("data-input-position", "top");
+        s.setAttribute("data-theme", giscusTheme());
+        s.setAttribute("data-lang", "zh-CN");
+        s.setAttribute("crossorigin", "anonymous");
+        s.async = true;
+        mount.appendChild(s);
+    }
+
+    // 首次加载
+    mountGiscus();
+
+    // swup 换页后容器被替换,重新挂载(按 pathname 匹配新文章的讨论)
+    document.addEventListener("swup:page:view", () => {
+        const mount = document.getElementById("giscus-mount");
+        if (mount && mount.childElementCount === 0) mountGiscus();
+    });
+
+    // 明暗切换 → 通知 giscus iframe 换主题
+    new MutationObserver(() => {
+        document
+            .querySelector("iframe.giscus-frame")
+            ?.contentWindow?.postMessage(
+                { giscus: { setConfig: { theme: giscusTheme() } } },
+                "https://giscus.app"
+            );
+    }).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+    });
+</script>
