@@ -34,7 +34,19 @@ paige.ns.cloudflare.com
 
 ![](/media/20261105-134731.png)
 
-- 这样就可以访问原生态hermes webapp了
 
+**构建webapp正确方式如下**
 
-![](/media/20261105-134855.png)
+```plain
+hermes config set webapp.enabled true
+```
+
+```plain
+hermes gateway restart
+```
+
+```plain
+hermes webapp
+```
+
+[![](/media/20261105-155333.png)](https://hermes-agent.nousresearch.com/docs/user-guide/desktop)
