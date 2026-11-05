@@ -47,6 +47,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://github.com/fuge0xsol",
 			external: true,
 		},
+		{
+			name: "打赏",
+			url: "https://hiddenswap.com/pay/nuKMx7J5", // HiddenSwap 收款页
+			external: true, // Show an external link icon and will open in a new tab
+		},
 	],
 };
 
