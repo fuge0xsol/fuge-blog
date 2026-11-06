@@ -34,7 +34,6 @@ paige.ns.cloudflare.com
 
 ![](/media/20261105-134731.png)
 
-
 **构建webapp正确方式如下**
 
 ```plain
@@ -49,4 +48,4 @@ hermes gateway restart
 hermes webapp
 ```
 
-[![](/media/20261105-155333.png)](https://hermes-agent.nousresearch.com/docs/user-guide/desktop)
+![](/media/20261105-155333.png "https://hermes-agent.nousresearch.com/docs/user-guide/desktop")![](/media/20261106-180222.png)
